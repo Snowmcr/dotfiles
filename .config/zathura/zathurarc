@@ -1,0 +1,8 @@
+map i scroll right
+map e scroll up
+map n scroll down
+map h scroll left
+
+set page-padding 1
+
+set font "FiraCode 12"
