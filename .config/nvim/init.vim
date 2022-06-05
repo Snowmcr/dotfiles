@@ -120,18 +120,18 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 " colorscheme dracula
-" autocmd vimenter * ++nested colorscheme gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " set Vim-specific sequences for RGB colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
-let g:nord_cursor_line_number_background = 1
+" let g:nord_italic = 1
+" let g:nord_italic_comments = 1
+" let g:nord_underline = 1
+" let g:nord_cursor_line_number_background = 1
 
-colorscheme nord
+" colorscheme nord
 
 let mapleader = " "
 
