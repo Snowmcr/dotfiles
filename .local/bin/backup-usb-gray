@@ -1,0 +1,7 @@
+#!/bin/bash
+DIR=/run/media/martinr/usb_gray
+NOW=$(date)
+if [ -e $DIR ];
+then rsync --include-from '/home/martinr/.include_rsync.txt' --exclude '*' -arv /home/martinr/ $DIR
+else echo "$DIR wasn't available at $NOW"
+fi
