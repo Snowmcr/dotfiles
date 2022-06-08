@@ -83,6 +83,9 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Nerdtree
 Plug 'preservim/nerdtree'
+" Git for nerdtree
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Dracula theme
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -117,6 +120,8 @@ Plug 'akinsho/toggleterm.nvim'
 " Greet screen and sessions manager
 Plug 'mhinz/vim-startify'
 
+" Icons for different plugins on vim
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " colorscheme dracula
@@ -151,6 +156,19 @@ let g:NERDTreeWinSize=38
 
 let NERDTreeMapOpenExpl='x'
 let NERDTreeMenuDown="e"
+
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 " EasyMotion
 nmap <leader>s <Plug>(easymotion-s2)
