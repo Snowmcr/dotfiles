@@ -219,6 +219,9 @@ map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Delete keybindings for startify
+autocmd User Startified for key in ['n', 'e', 'i', 'N'] |
+      \ execute 'nunmap <buffer>' key | endfor
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
