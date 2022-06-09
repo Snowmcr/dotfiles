@@ -15,6 +15,7 @@ noremap s d
 noremap t f
 noremap u i
 noremap y o
+
 noremap D G
 noremap E K
 noremap F E
@@ -140,6 +141,15 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 let mapleader = " "
 
+"
+" nmap <C-h> <C-w>h
+" nmap <C-n> <C-w>j
+" nmap <C-e> <C-w>k
+" nmap <C-i> :lol
+
+" Change CWD to current buffers
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
 " Telescope maps
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -149,6 +159,9 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Nerdtree  
 map <leader>nt :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
