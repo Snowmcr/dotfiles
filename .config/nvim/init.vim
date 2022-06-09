@@ -141,7 +141,9 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 let mapleader = " "
 
-"
+" python execute
+nmap <leader>py :!python3 %<cr>
+
 " nmap <C-h> <C-w>h
 " nmap <C-n> <C-w>j
 " nmap <C-e> <C-w>k
