@@ -144,11 +144,6 @@ let mapleader = " "
 " python execute
 nmap <leader>py :!python3 %<cr>
 
-" nmap <C-h> <C-w>h
-" nmap <C-n> <C-w>j
-" nmap <C-e> <C-w>k
-" nmap <C-i> :lol
-
 " Change CWD to current buffers
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
