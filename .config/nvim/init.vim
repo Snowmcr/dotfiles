@@ -63,7 +63,8 @@ set laststatus=2                   " The bar bellow is always visbible on vim
 set cursorline                     " Highlight current cursorline
 set termguicolors
 set timeoutlen=500
-set shell=fish                     " Sets fish as nvim shell for terminals
+let foldermethod="indent"
+set colorcolumn=80
 
 call plug#begin('~/.vim/plugged')
 
@@ -123,6 +124,12 @@ Plug 'mhinz/vim-startify'
 
 " Icons for different plugins on vim
 Plug 'ryanoasis/vim-devicons'
+
+" Manage git actions through nvim
+Plug 'tpope/vim-fugitive'
+
+" Zen mode
+Plug 'folke/zen-mode.nvim'
 call plug#end()
 
 " colorscheme dracula
@@ -141,8 +148,20 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 let mapleader = " "
 
+nnoremap 0 ^
+nnoremap ^ 0
+
 " python execute
 nmap <leader>py :!python3 %<cr>
+
+" Moving Between windows
+nnoremap <Left> <C-W>h
+nnoremap <Right> <C-W>l
+nnoremap <Up> <C-W>k
+nnoremap <Down> <C-W>j
+
+" Copy entire buffer.
+nnoremap <silent> <leader>y :<C-U>%y<CR>
 
 " Change CWD to current buffers
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -164,7 +183,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=38
 
-let NERDTreeMapOpenExpl='x'
+let NERDTreeMapOpenExpl='`'
 let NERDTreeMenuDown="e"
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
@@ -188,6 +207,7 @@ nmap <leader>w :w!<cr>
 
 " For spawning the new split how they should be
 set splitbelow splitright
+
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -276,4 +296,8 @@ require("toggleterm").setup{
     --end,
     close_on_exit = true,
 }
+
+require("zen-mode").setup {
+
+    }
 EOF
