@@ -1,37 +1,17 @@
 " Map Colemak keys in alphabetical order.
-noremap d g
-noremap e k
-noremap f e
-noremap g t
-noremap i l
-noremap j y
-noremap k n
-noremap l u
 noremap n j
-noremap o p
-noremap p r
-noremap r s
-noremap s d
-noremap t f
-noremap u i
-noremap y o
+noremap e k
+noremap i l
+noremap j n
+noremap k e
+noremap l i
 
-noremap D G
-noremap E K
-noremap F E
-noremap G T
-noremap I L
-noremap J Y
-noremap K N
-noremap L U
 noremap N J
-noremap O P
-noremap P R
-noremap R S
-noremap S D
-noremap T F
-noremap U I
-noremap Y O
+noremap E K
+noremap I L
+noremap J N
+noremap K E
+noremap L I
 
 " For exiting easily from a terminal
 tnoremap <Esc> <C-\><C-n>
