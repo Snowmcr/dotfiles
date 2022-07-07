@@ -1,0 +1,8 @@
+Documents/
+Documents/documentos_U/***
+Documents/constancias_certificados/***
+Pictures/***
+.local/
+.local/bin/***
+.include_rsync.txt
+
