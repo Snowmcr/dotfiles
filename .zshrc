@@ -33,6 +33,14 @@ alias ls="exa"
 alias ll="exa -l -g --icons"
 alias la="ll -a"
 
+
+# Changing "ls" to "exa"
+alias ls='exa --icons --color=always --group-directories-first' # my preferred listing
+alias la='exa -la --icons --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --icons --color=always --group-directories-first'  # long format
+alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
 # For managing dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
