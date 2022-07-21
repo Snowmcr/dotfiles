@@ -85,4 +85,6 @@
 
 (setq display-line-numbers-type 'relative)
 
-(setq org-hide-emphasis-markers t)
+;; (setq org-hide-emphasis-markers t)
+
+;; (setq org-roam-directory "~/Dropbox/org/roam")
