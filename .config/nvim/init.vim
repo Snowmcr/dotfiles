@@ -1,17 +1,45 @@
-" Map Colemak keys in alphabetical order.
-noremap n j
-noremap e k
-noremap i l
-noremap j n
-noremap k e
-noremap l i
+" get control-j back, so switch it with ctrl-n at qwerty position of j
+imap <c-n> <cr>
+cmap <c-n> <cr>
+inoremap <c-j> <c-n>
+cnoremap <c-j> <c-n>
 
+" rotate some keys about to get qwerty "hjkl" back for movement
+map n <down>
+map e <up>
+map i <right>
+
+" move these keys to their qwerty positions because they are
+" in the way of hjkl (and E for J)
+noremap k n
+noremap K N
+noremap u i
+noremap U I
+noremap l u
+noremap L U
 noremap N J
 noremap E K
 noremap I L
-noremap J N
-noremap K E
-noremap L I
+
+" this is the only key that isn't in qwerty or colemak position
+noremap j e
+noremap J E
+
+" window movement
+nnoremap <c-w>n <c-w>j
+nnoremap <c-w>i <c-w>l
+nnoremap <c-w>e <c-w>k
+
+" qwerty <c-w>n and <c-w>i stolen but do nothing so map back
+nnoremap <c-w>k <c-w>n
+nnoremap <c-w>l <c-w>i
+
+" pentadactyl binds ctrl-h to history otherwise
+map <c-h> <BS>
+cmap <c-h> <BS>
+
+" this nerdtree mapping interferes with movement
+let g:NERDTreeMapOpenExpl = "j"
 
 " For exiting easily from a terminal
 tnoremap <Esc> <C-\><C-n>
@@ -115,17 +143,6 @@ call plug#end()
 " colorscheme dracula
 autocmd vimenter * ++nested colorscheme gruvbox
 
-" set Vim-specific sequences for RGB colors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" let g:nord_italic = 1
-" let g:nord_italic_comments = 1
-" let g:nord_underline = 1
-" let g:nord_cursor_line_number_background = 1
-
-" colorscheme nord
-
 let mapleader = " "
 
 nnoremap 0 ^
@@ -135,10 +152,10 @@ nnoremap ^ 0
 nmap <leader>py :!python3 %<cr>
 
 " Moving Between windows
-nnoremap <Left> <C-W>h
-nnoremap <Right> <C-W>l
-nnoremap <Up> <C-W>k
-nnoremap <Down> <C-W>j
+" nnoremap <Left> <C-W>h
+" nnoremap <Right> <C-W>l
+" nnoremap <Up> <C-W>k
+" nnoremap <Down> <C-W>j
 
 " Copy entire buffer.
 nnoremap <silent> <leader>y :<C-U>%y<CR>
